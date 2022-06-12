@@ -1,5 +1,5 @@
 # Complete-Campus-Enrollment-System
-Complete Campus System BY JEHANKANDY
+Complete Campus Enrollment System BY JEHANKANDY
 <br><br>
 <b>SYSTEM IS UNDER DEVELOPMENT....!</b>
 <br>
