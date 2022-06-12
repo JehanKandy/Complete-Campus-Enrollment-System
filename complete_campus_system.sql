@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2022 at 03:38 PM
+-- Generation Time: Jun 12, 2022 at 06:55 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -55,6 +55,7 @@ CREATE TABLE `user_tbl` (
   `add2` varchar(255) NOT NULL,
   `add3` varchar(255) NOT NULL,
   `tp_no` varchar(20) NOT NULL,
+  `faculty` varchar(25) NOT NULL,
   `roll` varchar(20) NOT NULL,
   `status` int(1) NOT NULL,
   `enroll_date` date NOT NULL
