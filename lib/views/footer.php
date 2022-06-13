@@ -24,6 +24,7 @@
             </th>
         </tr>
         <tr>
+            
             <td>
                 <p></p>
                 <img src="image/249790.jpg" alt="" class="footer-img">
@@ -48,7 +49,7 @@
                 jehankandy@gmail.com
             </td>
             <td>
-                <a href="#">faculties</a><br>
+                <a href="#">Faculties</a><br>
                 <a href="#">Course</a>
             </td>
             <td>
@@ -76,8 +77,5 @@
     
     
     <hr style="background-color: white;">
-    <p>DEVELOPED BY <a href="https://github.com/JehanKandy" target="_blank"> &copy;JEHANKANDY</a> 2022 June</p>
-
-
-    
+    <p>DEVELOPED BY <a href="https://github.com/JehanKandy" target="_blank"> &copy;JEHANKANDY</a> 2022 June</p>    
 </div>
