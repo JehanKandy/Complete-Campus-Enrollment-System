@@ -10,6 +10,15 @@
             </div>
             <hr>
 
+            <?php 
+                include_once("../function/function.php");
+                if(isset($_POST['login'])){
+                    $result = login($_POST['username'], md5($_POST['password']));
+                    echo ($result);
+                }            
+            ?>
+
+
             <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
                 <div class="login-label">Username : </div>
                 <input type="text" name="username" id="username" class="login-input" placeholder="Username">
