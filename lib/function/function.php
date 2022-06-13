@@ -24,7 +24,8 @@
            
             $pwd = rand(10000,99999);
             $msg = "Your username : ".$nic."  Your Password is : " .$pwd." Important - Change Your Password After Login to the System";
-            
+            $new_pwd = md5($pwd);
+
             $mailto = $email;
             $subject = "Verification OTP - Email Sending System";
             $body = $msg;
@@ -32,10 +33,54 @@
     
             mail($mailto,$subject,$body,$headers);
 
-            $insert_student = "INSERT INTO user_tbl(id,email,pass,faculty,roll,user_status,enroll_date)VALUES('$nic','$email','$pwd','$faculty','student','1',NOW())";
+            $insert_student = "INSERT INTO user_tbl(id,email,pass,faculty,roll,user_status,enroll_date)VALUES('$nic','$email','$new_pwd','$faculty','student','1',NOW())";
             $insert_student_result = mysqli_query($con, $insert_student);
             header('location:../../index.php');
         }
+    }
+
+    function login($username, $pwd){
+        $con = Connection();
+
+        $select_sql = "SELECT * FROM user_tbl WHERE id = '$username' && pass = '$pwd'";
+        $select_sql_result = mysqli_query($con, $select_sql);
+        $select_sql_nor = mysqli_num_rows($select_sql_result);
+        $select_sql_row = mysqli_fetch_assoc($select_sql_result);
+
+        if($select_sql_nor > 0){
+            if($pwd != $select_sql_row['pass']){
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password doesn't match...!</div>&nbsp</center>"; 
+            }
+            else{
+                if($select_sql_row['user_status'] == 1){
+                    if($select_sql_row['roll'] == 'student'){
+                        setcookie('login',$select_sql_row['id'],time()+60*60,'/');
+                        $_SESSION['loginSession'] = $select_sql_row['id'];
+                        header('location:../files/student.php');
+                    }
+                    elseif($select_sql_row['roll'] == 'teacher'){
+                        setcookie('login',$select_sql_row['id'],time()+60*60,'/');
+                        $_SESSION['loginSession'] = $select_sql_row['id'];
+                        header('location:../files/teacher.php');
+                    }
+                    elseif($select_sql_row['roll'] == 'admin'){
+                        setcookie('login',$select_sql_row['id'],time()+60*60,'/');
+                        $_SESSION['loginSession'] = $select_sql_row['id'];
+                        header('location:../files/admin.php');
+                    }
+                    elseif($select_sql_row['roll'] == 'staff'){
+                        setcookie('login',$select_sql_row['id'],time()+60*60,'/');
+                        $_SESSION['loginSession'] = $select_sql_row['id'];
+                        header('location:../files/staff.php');
+                    }
+                }else{
+                    return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Account Deactivated..!</div>&nbsp</center>";
+                }
+            }
+        }else{
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Recodes Not Found...!</div>&nbsp</center>";
+        }
+        
     }
 
 
