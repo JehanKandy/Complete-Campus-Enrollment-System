@@ -18,6 +18,40 @@
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
 }
 
+.back-btn {
+    width: 100px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #9f01ea, #56d8e4);
+    transition: 0.5s;
+}
+
+.back-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
+}
+
+.gallery {
+    background-color: #ffffff5e;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 50px;
+}
+
+.gallery .title {
+    text-align: center;
+    font-size: 200%;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.card-img-top {
+    height: 300px;
+}
+
 .home-content {
     background: #e7e7e75e;
     height: 100%;
@@ -93,6 +127,20 @@
     color: white;
 }
 
+.footer1 {
+    background: rgb(66, 66, 66);
+    height: 100%;
+    color: white;
+    padding-top: 5px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 5px;
+}
+
+.footer1 p a {
+    color: white;
+}
+
 .course {
     background: #ffffff5e;
     height: 100%;
@@ -130,7 +178,161 @@
     border-radius: 15px;
 }
 
+.temp-reg-content {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(136, 136, 136, 0.85), rgba(0, 0, 0, 0.85)), url(../image/wp9314387-4k-technology-desktop-wallpapers.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 150px;
+}
+
+.temp-reg-content .content-reg {
+    padding-top: 150px;
+    padding-left: 575px;
+}
+
+.temp-reg-content .temp-content-box {
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    padding: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+.temp-title {
+    text-transform: uppercase;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 200%;
+}
+
+.temp-reg-content form .label {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding-bottom: 5px;
+    padding-top: 8px;
+}
+
+.temp-reg-content form .input-login {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+    border: 1px solid rgb(180, 180, 180);
+    color: rgba(37, 37, 37, 0.829);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    border-radius: 5px;
+}
+
+.temp-reg-content form .pay-btn {
+    width: 48%;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    transition: 0.5s;
+}
+
+.temp-reg-content form .pay-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
+}
+
+.temp-reg-content form .clear-btn {
+    width: 48%;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #bbbbbb, #696969);
+    transition: 0.5s;
+}
+
+.temp-reg-content form .clear-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
+}
+
+.temp-reg-content form .input-login-cvv {
+    width: 65px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+    border: 1px solid rgb(180, 180, 180);
+    color: rgba(37, 37, 37, 0.829);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    border-radius: 5px;
+}
+
+.login {
+    width: 100%;
+    height: 86vh;
+    background-image: linear-gradient(rgba(136, 136, 136, 0.85), rgba(0, 0, 0, 0.85)), url(../image/wp9314293-4k-technology-desktop-wallpapers.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 150px;
+}
+
+.login-content {
+    padding-top: 150px;
+    padding-left: 575px;
+}
+
+.login-content .login-box {
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    padding: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-title {
+    text-transform: uppercase;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 200%;
+}
+
+.login-content .login-label {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding-bottom: 5px;
+    padding-top: 8px;
+}
+
+.login-content form .login-input {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+    border: 1px solid rgb(180, 180, 180);
+    color: rgba(37, 37, 37, 0.829);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    border-radius: 5px;
+}
+
+.login-content form .login-btn {
+    width: 100%;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    transition: 0.5s;
+}
+
+.login-content form .login-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
+}
+
 @media screen and (max-width: 1366px) {
+    .card-img-top {
+        height: 200px;
+    }
     .footer {
         background: rgb(66, 66, 66);
         height: 100%;
@@ -151,5 +353,13 @@
         text-align: left;
         padding-left: 75px;
         font-family: 'Roboto Flex', sans-serif;
+    }
+    .temp-reg-content .content-reg {
+        padding-top: 75px;
+        padding-left: 460px;
+    }
+    .login-content {
+        padding-top: 100px;
+        padding-left: 400px;
     }
 }
