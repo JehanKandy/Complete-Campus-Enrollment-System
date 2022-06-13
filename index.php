@@ -41,6 +41,52 @@
 </div>
 </div>
 
+<div class="gallery">
+  <div class="title">
+      Gallery
+  </div><br>
+  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="image/wp8002886-4k-technology-desktop-wallpapers.jpg" alt="Card image cap" class="gallery-img">
+    <div class="card-body">
+      <p class="card-text">Blood Donation Camp</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Monday 23 April 2022</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="image/wp9109091-4k-technology-desktop-wallpapers.jpg" alt="Card image cap" class="gallery-img">
+    <div class="card-body">
+      <p class="card-text">Research Trip</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Sunday 05 March 2022</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="image/wp9225784-4k-technology-desktop-wallpapers.jpg" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Cricket Match</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Friday 15 December 2021</small>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="image/wp9314293-4k-technology-desktop-wallpapers.jpg" alt="Card image cap" class="gallery-img">
+    <div class="card-body">
+      <p class="card-text">Projectwork</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Wednesday 18 November 2021</small>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
 <div class="home-content">
     <div class="title">
         faculties 
@@ -80,35 +126,39 @@
     <img class="card-img-top" src="image/266490.jpg" alt="Card image cap" style="height: 300px;">
     <div class="card-body">
       <h5 class="card-title">BSc in Information Technology</h5>
-
    </div>
   </div>
   <div class="card">
     <img class="card-img-top" src="image/266490.jpg" alt="Card image cap" style="height: 300px;">
     <div class="card-body">
       <h5 class="card-title">BTech in Information Technology</h5>
-
     </div>
   </div>
   <div class="card">
     <img class="card-img-top" src="image/266503.jpg" alt="Card image cap" style="height: 300px;">
     <div class="card-body">
       <h5 class="card-title">BSc in Management</h5>
-
     </div>
   </div>
+</div>
+<br>
+<div class="card-deck">
   <div class="card">
-    <img class="card-img-top" src="image/439635.jpg" alt="Card image cap" style="height: 300px;">
+    <img class="card-img-top" src="image/266490.jpg" alt="Card image cap" style="height: 300px;">
     <div class="card-body">
       <h5 class="card-title">BA in English</h5>
-
+   </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="image/266490.jpg" alt="Card image cap" style="height: 300px;">
+    <div class="card-body">
+      <h5 class="card-title">Higher Diploma in Information Technology</h5>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="image/249790.jpg" alt="Card image cap" style="height: 300px;">
+    <img class="card-img-top" src="image/266503.jpg" alt="Card image cap" style="height: 300px;">
     <div class="card-body">
-      <h5 class="card-title">Higher Diploma in Information Technology</h5>
-
+      <h5 class="card-title">Diploma in English</h5>
     </div>
   </div>
 </div>
