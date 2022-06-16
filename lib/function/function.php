@@ -83,6 +83,111 @@
         
     }
 
+    function all_student(){
+        $con = Connection();
 
+        $all_student = "SELECT * FROM user_tbl WHERE roll = 'student'";
+        $all_student_result = mysqli_query($con, $all_student);
+        
+        while($row = mysqli_fetch_assoc($all_student_result)){
+            $std = "<tr>
+                    <td>".$row['id']."</td>
+                    <td>".$row['fname']."</td>
+                    <td>".$row['lname']."</td>
+                    <td>".$row['email']."</td>
+                    <td>".$row['faculty']."</td>
+                    <td>".$row['roll']."</td>";
+                if($row['user_status'] == 1){
+                    $is = "<td><h4><span class='badge badge-success'>Active</span></h4></td>";
+                }
+                else{
+                    $is = "<td><h4><span class='badge badge-danger'>Deactive</span></h4></td>";
+                }
+            $std1 = "<td><a href='more_infor.php?id=$row[id]'><button class='btn btn-primary'>View Infor</button></a></td>
+                    <tr>";
+        }
+        echo $std.$is.$std1;
+    }
 
+    function nav_bar_id(){
+        $con = Connection();
+
+        $login_session_id = strval($_SESSION['loginSession']);
+
+        echo $login_session_id;
+    }
+
+    function get_std_data(){
+        $con = Connection();
+        $id = strval($_SESSION['loginSession']);
+
+        $std_data = "SELECT * FROM user_tbl WHERE id = '$id'";
+        $std_data_result = mysqli_query($con, $std_data);
+        $std_data_row = mysqli_fetch_assoc($std_data_result);
+
+            $data =  "<div class='profile'>
+                    <form action='' method='POST'>
+                        <table border='1'>
+                            <tr>
+                                <td><span>Student ID  </span></td>
+                                <td><span>".$std_data_row['id']."</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Email  </span></td>
+                                <td><span>".$std_data_row['email']."</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Full Name  </span></td>
+                                <td><span><textarea cols='50' rows='3' class='textarea-input'>".$std_data_row['full_name']."</textarea></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Name with Initials</span></td>
+                                <td><span><span><input type='text'name='new_fullname' value='".$std_data_row['name_with_latters']."' class='update-input'></span></td>
+                            </td>
+                            <tr>
+                                <td><span>First Name</span></td>
+                                <td><span><input type='text'name='new_fullname' value='".$std_data_row['fname']."' class='update-input'></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Last Name</span></td>
+                                <td><span><input type='text'name='new_fullname' value='".$std_data_row['lname']."' class='update-input'></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Address</span></td>
+                                <td><span><textarea cols='50' rows='3' class='textarea-input'>".$std_data_row['address']."</textarea></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Mobile Number</span></td>
+                                <td><span><input type='text'name='new_fullname' value='".$std_data_row['tp_no']."' class='update-input'></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Faculty  </span></td>
+                                <td><span>".$std_data_row['faculty']."</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Roll  </span></td>
+                                <td><span>".$std_data_row['roll']."</span></td>
+                            </tr>
+                            
+
+                            <tr>
+                                <td><span>Account Status  </span></td> ";
+                            if($std_data_row['user_status'] == 1){
+                                $data .="<td><span>Account Active</span></td>";
+                            }else{
+                                $data .="<td><span>Account Deactive</span></td>";
+                            }
+                            
+                    $data .="</tr>
+                            <tr>
+                                <td><span>Enroll Date  </span></td>
+                                <td><span>".$std_data_row['enroll_date']."</span></td>
+                            </tr>
+                            
+                        </table>
+                    </form>
+                </div>";
+
+                echo $data;
+    }
 ?>
