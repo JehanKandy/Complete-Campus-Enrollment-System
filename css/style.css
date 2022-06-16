@@ -418,6 +418,54 @@
     margin-right: 15px;
 }
 
+.profile-view {
+    background-color: #f1f1f194;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+.profile-view .edit-btn {
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    background: #56d8e4;
+    transition: 0.5s;
+}
+
+.profile-view .edit-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
+}
+
+.tbl tr {
+    height: 50px;
+}
+
+.tbl tr td {
+    width: 150px;
+    vertical-align: top;
+}
+
+.tbl tr td span {
+    font-size: 16px;
+}
+
+.update-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+
+.textarea-input {
+    resize: none;
+}
+
 @media only screen and (max-width: 1400px) {
     .login-content {
         padding-top: 100px;
