@@ -33,6 +33,16 @@ Logins<br>
 Use Fonts :<br>
  URL : @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Roboto+Flex:opsz@8..144&family=Rubik&family=Teko:wght@300&display=swap');
 
+<br><br>
+    use font families <br>
+        font-family: 'Bebas Neue', cursive;<br>
+        font-family: 'Fjalla One', sans-serif;<br>
+        font-family: 'Kdam Thmor Pro', sans-serif;<br>
+        font-family: 'Roboto Flex', sans-serif;<br>
+        font-family: 'Rubik', sans-serif;<br>
+        font-family: 'Teko', sans-serif;<br><br>
+
+
 
 DEVELOPING BY JEHANKANDY 
 <br> Start to Develop at 11 June 2022 
