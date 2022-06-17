@@ -201,6 +201,17 @@
         $std_data_result = mysqli_query($con, $std_data);
         $std_data_row = mysqli_fetch_assoc($std_data_result);
 
+            if(isset($_POST['user_update'])){
+                $update_full_name = $_POST['new_fullname'];
+                $update_name_latters = $_POST['name_latter'];
+                $update_fn = $_POST['new_fn'];
+                $update_ln = $_POST['new_ln'];
+                $update_address = $_POST['new_address'];
+                $update_tpno = $_POST['new_mobile'];
+
+            }
+
+            
             $data =  "<div class='profile-update'>
                     <form action='' method='POST'>
                         <table border='0' class='tbl'>
@@ -262,7 +273,7 @@
                             
                         </table>
 
-                        <input type='submit' name='std_update' class='update-btn' value='Update'>
+                        <input type='submit' name='user_update' class='update-btn' value='Update'>
                     </form>
                 </div>";
 
