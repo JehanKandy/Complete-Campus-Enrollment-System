@@ -464,6 +464,32 @@
 
 .textarea-input {
     resize: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+
+.profile-update {
+    background-color: #f1f1f194;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+.update-btn {
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    background: #56d8e4;
+    transition: 0.5s;
+}
+
+.update-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
 }
 
 @media only screen and (max-width: 1400px) {
