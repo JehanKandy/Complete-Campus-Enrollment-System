@@ -1,4 +1,10 @@
 <?php 
+  include_once("../function/function.php");
+
+  if(empty($_SESSION['loginSession'])){
+      header('location:../auth/login.php');
+  }
+
   include_once("../views/header.php");
   include_once("../views/nav_loged.php");
 ?>
@@ -6,8 +12,8 @@
 <div class="admin-content">
     <section class="sidebar">
         <ul class="nav-bar">
-            <li><a href=""><i class='fas fa-tachometer-alt' style='font-size:20px'></i>&nbsp;&nbsp;Dashboard</a></li>
-            <li><a href=""><i class='fas fa-user-graduate' style='font-size:20px'></i>&nbsp;&nbsp;Student</a></li>
+            <li><a href="#"><i class='fas fa-tachometer-alt' style='font-size:20px'></i>&nbsp;&nbsp;Dashboard</a></li>
+            <li><a href="admin/student.php"><i class='fas fa-user-graduate' style='font-size:20px'></i>&nbsp;&nbsp;Student</a></li>
             <li><a href=""><i class='fas fa-chalkboard-teacher' style='font-size:20px'></i>&nbsp;&nbsp;Lecturers</a></li>
             <li><a href=""><i class='fas fa-user-tag' style='font-size:20px'></i>&nbsp;&nbsp;Staff</a></li>
             <li><a href=""><i class='fas fa-school' style='font-size:20px'></i>&nbsp;&nbsp;Faculties</a></li>
@@ -31,7 +37,7 @@
                   <h4><i class='fas fa-user-graduate' style='font-size:40px'></i>&nbsp;Students</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b>45</b>
+                    <b><?php count_student(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -43,7 +49,7 @@
                   <h4><i class='fas fa-chalkboard-teacher' style='font-size:40px'></i>&nbsp;Lecturers</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b>45</b>
+                    <b><?php count_teacher(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -55,7 +61,7 @@
                   <h4><i class='fas fa-user-tag' style='font-size:40px'></i>&nbsp;Staff</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b>45</b>
+                    <b><?php count_staff(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -67,7 +73,7 @@
                   <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Admins</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b>45</b>
+                    <b><?php count_admin(); ?></b>
                   </h5>
                 </div>
               </div>
