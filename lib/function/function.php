@@ -117,7 +117,83 @@
         echo $login_session_id;
     }
 
-    function get_std_data(){
+    function get_std_data_view(){
+        $con = Connection();
+        $std_id = strval($_SESSION['loginSession']);
+
+        $std_data_view = "SELECT * FROM user_tbl WHERE id = '$std_id'";
+        $std_data_view_result = mysqli_query($con, $std_data_view);
+        $std_data_view_row = mysqli_fetch_assoc($std_data_view_result);
+
+        $data_view =  "<div class='profile-view'>
+        <form action='' method='POST'>
+            <table border='0' class='tbl'>
+                <tr>
+                    <td><span>Student ID  </span></td>
+                    <td><span><input type='text' class='update-input' value='".$std_data_view_row['id']."' disabled></span></td>
+                </tr>
+                <tr>
+                    <td><span>Email  </span></td>
+                    <td><span><input type='text' class='update-input' value='".$std_data_view_row['email']."' disabled></span></td>
+                </tr>
+                <tr>
+                    <td><span>Full Name  </span></td>
+                    <td><span><textarea cols='50' rows='4' class='textarea-input' name='new_fullname' disabled>".$std_data_view_row['full_name']."</textarea></span></td>
+                </tr>
+                <tr>
+                    <td><span>Name with Initials</span></td>
+                    <td><span><input type='text'name='name_latter' value='".$std_data_view_row['name_with_latters']."' class='update-input' disabled></></td>
+                </td>
+                <tr>
+                    <td><span>First Name</span></td>
+                    <td><span><input type='text'name='new_fn' value='".$std_data_view_row['fname']."' class='update-input' disabled></span></td>
+                </tr>
+                <tr>
+                    <td><span>Last Name</span></td>
+                    <td><span><input type='text'name='new_ln' value='".$std_data_view_row['lname']."' class='update-input' disabled></span></td>
+                </tr>
+                <tr>
+                    <td><span>Address</span></td>
+                    <td><span><textarea cols='50' rows='4' class='textarea-input' name='new_address' disabled>".$std_data_view_row['address']."</textarea></span></td>
+                </tr>
+                <tr>
+                    <td><span>Mobile Number</span></td>
+                    <td><span><input type='text'name='new_mobile' value='".$std_data_view_row['tp_no']."' class='update-input' disabled></span></td>
+                </tr>
+                <tr>
+                    <td><span>Faculty  </span></td>
+                    <td><span><input type='text' class='update-input' value='".$std_data_view_row['faculty']."' disabled></span></td>
+                </tr>
+                <tr>
+                    <td><span>Roll  </span></td>
+                    <td><span><input type='text' class='update-input' value='".$std_data_view_row['roll']."' disabled></span></td>
+                </tr>
+                
+
+                <tr>
+                    <td><span>Account Status  </span></td> ";
+                if($std_data_view_row['user_status'] == 1){
+                    $data_view .="<td><h3 class='badge badge-success'>Account Active</h3></td>";
+                }else{
+                    $data_view .="<td><h3 class='badge badge-danger'>Account Deactive</h3></td>";
+                }
+                
+        $data_view .="</tr>
+                <tr>
+                    <td><span>Enroll Date  </span></td>
+                    <td><span><input type='text' class='update-input' value='".$std_data_view_row['enroll_date']."' disabled></span></td>
+                </tr>
+                
+            </table>
+        </form>
+
+        <a href='edit_infor.php?id=$std_data_view_row[id]'><button class='edit-btn'>Edit Infor</button></a>
+    </div>";
+
+                echo $data_view;
+    }
+
+    function get_std_data_update(){
         $con = Connection();
         $id = strval($_SESSION['loginSession']);
 
@@ -125,66 +201,68 @@
         $std_data_result = mysqli_query($con, $std_data);
         $std_data_row = mysqli_fetch_assoc($std_data_result);
 
-            $data =  "<div class='profile'>
+            $data =  "<div class='profile-update'>
                     <form action='' method='POST'>
-                        <table border='1'>
+                        <table border='0' class='tbl'>
                             <tr>
                                 <td><span>Student ID  </span></td>
-                                <td><span>".$std_data_row['id']."</span></td>
+                                <td><span><input type='text' class='update-input' value='".$std_data_row['id']."' disabled></span></td>
                             </tr>
                             <tr>
                                 <td><span>Email  </span></td>
-                                <td><span>".$std_data_row['email']."</span></td>
+                                <td><span><input type='text' class='update-input' value='".$std_data_row['email']."' disabled></span></td>
                             </tr>
                             <tr>
                                 <td><span>Full Name  </span></td>
-                                <td><span><textarea cols='50' rows='3' class='textarea-input'>".$std_data_row['full_name']."</textarea></span></td>
+                                <td><span><textarea cols='50' rows='3' class='textarea-input' name='new_fullname'>".$std_data_row['full_name']."</textarea></span></td>
                             </tr>
                             <tr>
                                 <td><span>Name with Initials</span></td>
-                                <td><span><span><input type='text'name='new_fullname' value='".$std_data_row['name_with_latters']."' class='update-input'></span></td>
+                                <td><span><input type='text'name='name_latter' value='".$std_data_row['name_with_latters']."' class='update-input'></></td>
                             </td>
                             <tr>
                                 <td><span>First Name</span></td>
-                                <td><span><input type='text'name='new_fullname' value='".$std_data_row['fname']."' class='update-input'></span></td>
+                                <td><span><input type='text'name='new_fn' value='".$std_data_row['fname']."' class='update-input'></span></td>
                             </tr>
                             <tr>
                                 <td><span>Last Name</span></td>
-                                <td><span><input type='text'name='new_fullname' value='".$std_data_row['lname']."' class='update-input'></span></td>
+                                <td><span><input type='text'name='new_ln' value='".$std_data_row['lname']."' class='update-input'></span></td>
                             </tr>
                             <tr>
                                 <td><span>Address</span></td>
-                                <td><span><textarea cols='50' rows='3' class='textarea-input'>".$std_data_row['address']."</textarea></span></td>
+                                <td><span><textarea cols='50' rows='3' class='textarea-input' name='new_address'>".$std_data_row['address']."</textarea></span></td>
                             </tr>
                             <tr>
                                 <td><span>Mobile Number</span></td>
-                                <td><span><input type='text'name='new_fullname' value='".$std_data_row['tp_no']."' class='update-input'></span></td>
+                                <td><span><input type='text'name='new_mobile' value='".$std_data_row['tp_no']."' class='update-input'></span></td>
                             </tr>
                             <tr>
                                 <td><span>Faculty  </span></td>
-                                <td><span>".$std_data_row['faculty']."</span></td>
+                                <td><span><input type='text' class='update-input' value='".$std_data_row['faculty']."' disabled></span></td>
                             </tr>
                             <tr>
                                 <td><span>Roll  </span></td>
-                                <td><span>".$std_data_row['roll']."</span></td>
+                                <td><span><input type='text' class='update-input' value='".$std_data_row['roll']."' disabled></span></td>
                             </tr>
                             
 
                             <tr>
                                 <td><span>Account Status  </span></td> ";
                             if($std_data_row['user_status'] == 1){
-                                $data .="<td><span>Account Active</span></td>";
+                                $data .="<td><h3 class='badge badge-success'>Account Active</h3></td>";
                             }else{
-                                $data .="<td><span>Account Deactive</span></td>";
+                                $data .="<td><h3 class='badge badge-danger'>Account Deactive</h3></td>";
                             }
                             
                     $data .="</tr>
                             <tr>
                                 <td><span>Enroll Date  </span></td>
-                                <td><span>".$std_data_row['enroll_date']."</span></td>
+                                <td><span><input type='text' class='update-input' value='".$std_data_row['enroll_date']."' disabled></span></td>
                             </tr>
                             
                         </table>
+
+                        <input type='submit' name='std_update' class='update-btn' value='Update'>
                     </form>
                 </div>";
 
