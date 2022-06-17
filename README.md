@@ -30,6 +30,8 @@ Logins<br>
 
 
 **************************************
+Use Fonts :<br>
+ URL : @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Roboto+Flex:opsz@8..144&family=Rubik&family=Teko:wght@300&display=swap');
 
 
 DEVELOPING BY JEHANKANDY 
