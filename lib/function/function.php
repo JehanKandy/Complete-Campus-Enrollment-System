@@ -154,7 +154,7 @@
                 </tr>
                 <tr>
                     <td><span>Address</span></td>
-                    <td><span><textarea cols='50' rows='4' class='textarea-input' name='new_address' disabled>".$std_data_view_row['address']."</textarea></span></td>
+                    <td><span><textarea cols='50' rows='4' class='textarea-input' name='new_address' disabled>".$std_data_view_row['user_address']."</textarea></span></td>
                 </tr>
                 <tr>
                     <td><span>Mobile Number</span></td>
@@ -209,6 +209,11 @@
                 $update_address = $_POST['new_address'];
                 $update_tpno = $_POST['new_mobile'];
 
+                $update_data_sql = "UPDATE user_tbl SET full_name = '$update_full_name', name_with_latters = '$update_name_latters', fname = '$update_fn', lname = '$update_ln', user_address = '$update_address', tp_no = '$update_tpno'";
+                $update_data_sql_result = mysqli_query($con, $update_data_sql);
+
+                echo "<center>&nbsp<div class='alert alert-success col-10' role='alert'>Profile Updated..!</div>&nbsp</center>";
+
             }
 
             
@@ -241,7 +246,7 @@
                             </tr>
                             <tr>
                                 <td><span>Address</span></td>
-                                <td><span><textarea cols='50' rows='3' class='textarea-input' name='new_address'>".$std_data_row['address']."</textarea></span></td>
+                                <td><span><textarea cols='50' rows='3' class='textarea-input' name='new_address'>".$std_data_row['user_address']."</textarea></span></td>
                             </tr>
                             <tr>
                                 <td><span>Mobile Number</span></td>
