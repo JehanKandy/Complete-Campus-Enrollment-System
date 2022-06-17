@@ -114,9 +114,7 @@
                     <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactivate</h4>
                     <hr style="background-color:white">
                     <h5>
-                      <b>Students - 95</b><br>
-                      <b>Lecturers - 95</b><br>
-                      <b>Staff - 25</b>
+                        <?php admin_deactive_users(); ?>
                     </h5>
                   </div>
                 </div>
