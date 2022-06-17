@@ -324,4 +324,25 @@
 
         echo $admin_count_nor;
     }
+
+    function admin_deactive_users(){
+        $con = Connection();
+
+        $std_deactive = "SELECT * FROM user_tbl WHERE roll ='student' && user_status ='0'";
+        $std_deactive_result = mysqli_query($con, $std_deactive);
+        $std_deactive_nor = mysqli_num_rows($std_deactive_result);
+
+        $lec_deactive = "SELECT * FROM user_tbl WHERE roll ='teacher' && user_status ='0'";
+        $lec_deactive_result = mysqli_query($con, $lec_deactive);
+        $lec_deactive_nor = mysqli_num_rows($lec_deactive_result);
+
+        $staff_deactive = "SELECT * FROM user_tbl WHERE roll ='staff' && user_status ='0'";
+        $staff_deactive_result = mysqli_query($con, $staff_deactive);
+        $staff_deactive_nor = mysqli_num_rows($staff_deactive_result);
+
+        echo "<b>Students - ".$std_deactive_nor."</b><br>
+            <b>Lecturers - ".$lec_deactive_nor."</b><br>
+            <b>Staff - ".$staff_deactive_nor."</b>";
+
+    }
 ?>
