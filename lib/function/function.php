@@ -284,4 +284,44 @@
 
                 echo $data;
     }
+
+    function count_student(){
+        $con = Connection();
+
+        $std_count = "SELECT * FROM user_tbl WHERE roll = 'student'";
+        $std_count_result = mysqli_query($con, $std_count);
+        $std_count_nor = mysqli_num_rows($std_count_result);
+
+        echo $std_count_nor;
+    }
+
+    function count_teacher(){
+        $con = Connection();
+
+        $lec_count = "SELECT * FROM user_tbl WHERE roll = 'teacher'";
+        $lec_count_result = mysqli_query($con, $lec_count);
+        $lec_count_nor = mysqli_num_rows($lec_count_result);
+
+        echo $lec_count_nor;
+    }
+
+    function count_staff(){
+        $con = Connection();
+
+        $staff_count = "SELECT * FROM user_tbl WHERE roll = 'staff'";
+        $staff_count_result = mysqli_query($con, $staff_count);
+        $staff_count_nor = mysqli_num_rows($staff_count_result);
+
+        echo $staff_count_nor;
+    }
+
+    function count_admin(){
+        $con = Connection();
+
+        $admin_count = "SELECT * FROM user_tbl WHERE roll = 'admin'";
+        $admin_count_result = mysqli_query($con, $admin_count);
+        $admin_count_nor = mysqli_num_rows($admin_count_result);
+
+        echo $admin_count_nor;
+    }
 ?>
