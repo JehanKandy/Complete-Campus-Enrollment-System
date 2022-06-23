@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Roboto+Flex:opsz@8..144&family=Rubik&family=Teko:wght@300&display=swap');
+
+/*
+
+    use above URL for activate following Fonts
+
+    use font families
+
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'Fjalla One', sans-serif;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-family: 'Roboto Flex', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Teko', sans-serif;
+
+*/
+
 .carousel-item img {
     width: 100%;
     height: 90vh;
@@ -14,8 +30,33 @@
     transition: 0.5s;
 }
 
+.eye {
+    position: absolute;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+#hide1 {
+    display: none;
+}
+
 .login-btn-nav:hover {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
+}
+
+.logout-btn-nav {
+    width: 100px;
+    height: 45px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #e70e0e, #a10c0c);
+    transition: 0.5s;
+}
+
+.logout-btn-nav:hover {
+    box-shadow: 0 2px 4px 0 rgba(241, 204, 204, 0.678), 0 3px 10px 0 rgba(255, 80, 80, 0.596);
 }
 
 .back-btn {
@@ -129,7 +170,7 @@
 
 .footer1 {
     background: rgb(66, 66, 66);
-    height: 100%;
+    height: 50px;
     color: white;
     padding-top: 5px;
     padding-left: 75px;
@@ -348,7 +389,130 @@
     box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 1366px) {
+.admin-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #1d1d1d;
+    color: white;
+    min-height: calc(100vh);
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+.sidebar .nav-bar li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sidebar .nav-bar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.sidebar .nav-bar li:hover a {
+    color: rgb(153, 153, 153);
+    font-size: 20px;
+}
+
+.admin-panel {
+    padding-top: 25px;
+    padding-left: 15px;
+    width: 90%;
+}
+
+.sub-row2 {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.profile-view {
+    background-color: #f1f1f194;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+.profile-view .edit-btn {
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    background: #56d8e4;
+    transition: 0.5s;
+}
+
+.profile-view .edit-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
+}
+
+.tbl tr {
+    height: 50px;
+}
+
+.tbl tr td {
+    width: 150px;
+    vertical-align: top;
+}
+
+.tbl tr td span {
+    font-size: 16px;
+}
+
+.update-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+
+.textarea-input {
+    resize: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+
+.profile-update {
+    background-color: #f1f1f194;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+.update-btn {
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    background: #56d8e4;
+    transition: 0.5s;
+}
+
+.update-btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(161, 161, 161, 0.678), 0 3px 10px 0 rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 1400px) {
+    .login-content {
+        padding-top: 100px;
+        padding-left: 400px;
+    }
     .card-img-top {
         height: 200px;
     }
@@ -376,9 +540,5 @@
     .temp-reg-content .content-reg {
         padding-top: 75px;
         padding-left: 460px;
-    }
-    .login-content {
-        padding-top: 100px;
-        padding-left: 400px;
     }
 }

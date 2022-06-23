@@ -1,6 +1,7 @@
 <?php include_once("../views/header.php"); ?>
 <body>
 <?php include_once("../views/login_nav.php"); ?>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <div class="login">
     <div class="login-content">
@@ -24,7 +25,11 @@
                 <input type="text" name="username" id="username" class="login-input" placeholder="Username">
 
                 <div class="login-label">Password : </div>
-                <input type="password" name="password" id="password" class="login-input" placeholder="Password">
+                <input type="password" name="password" id="pass" class="login-input" placeholder="Password">
+                <span class="eye" onclick="hide_pass()">
+                    <i id="hide1" class='far fa-eye'></i>
+                    <i id="hide2" class='far fa-eye-slash'></i>
+                </span>
                 <br><br>
                 <input type="submit" value="Login" class="login-btn" name="login">
             </form>
@@ -35,5 +40,7 @@
 
 
 <?php include_once("../views/footer1.php"); ?>
+<script src="../../js/script.js"></script>
+
 </body>
 </html>
