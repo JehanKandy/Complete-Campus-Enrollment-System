@@ -42,7 +42,38 @@ Use Fonts :<br>
         font-family: 'Rubik', sans-serif;<br>
         font-family: 'Teko', sans-serif;<br><br>
 
+<br><br>
+<hr>
+<br><br>
 
+# Development History
 
+<br><br>
+
+<b>13 June 2022</b>
+ <br>
+ 1.strat to develop <br>
+ 2.update project<br>
+ 
+ <b>14 June 2022</b>
+ <br>
+ 1.strat to develop <br>
+ 2.update project<br>
+
+ <b>14 June 2022</b>
+ <br>
+ 1.strat to develop <br>
+ 2.update project<br>
+ 
+ 
+ <b>14 June 2022</b>
+ <br>
+ 1.strat to develop <br>
+ 2.update project<br>
+ 
+ 
+ <br><br>
+ <hr>
+ <br><br>
 DEVELOPING BY JEHANKANDY 
 <br> Start to Develop at 11 June 2022 
