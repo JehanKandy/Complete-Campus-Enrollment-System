@@ -50,12 +50,12 @@ Use Fonts :<br>
 
 <br><br>
 
-<b>13 June 2022</b>
+<b>12 June 2022</b>
  <br>
  1.strat to develop <br>
  2.update project<br>
  
- <b>14 June 2022</b>
+ <b>13 June 2022</b>
  <br>
  1.strat to develop <br>
  2.update project<br>
@@ -66,7 +66,7 @@ Use Fonts :<br>
  2.update project<br>
  
  
- <b>14 June 2022</b>
+ <b>15 June 2022</b>
  <br>
  1.strat to develop <br>
  2.update project<br>
