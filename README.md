@@ -46,7 +46,14 @@ Use Fonts :<br>
 <hr>
 <br><br>
 
+# Development History
 
+<br><br>
+
+<b>13 June 2022</b>
+ <br>
+ 1.strat to develop
+ 2. update project
 
 
 DEVELOPING BY JEHANKANDY 
