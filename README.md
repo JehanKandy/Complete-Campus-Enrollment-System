@@ -58,8 +58,8 @@ Use Fonts :<br>
 <br><br>
 
  <b>13 June 2022</b><br>
- 1.strat to develop <br>
- 2.update project<br>
+
+1.update project<br>
  <br><br>
  <hr>
  <br><br>
@@ -67,8 +67,8 @@ Use Fonts :<br>
  <b>14 June 2022</b>
 
  <br>
- 1.strat to develop <br>
- 2.update project<br>
+
+1.update project<br>
 
  <br><br>
  <hr>
@@ -76,8 +76,8 @@ Use Fonts :<br>
  
  <b>14 June 2022</b>
  <br>
- 1.strat to develop <br>
- 2.update project<br>
+
+1.update project<br>
  
  <br><br>
  <hr>
@@ -85,8 +85,7 @@ Use Fonts :<br>
  
  <b>15 June 2022</b>
  <br>
- 1.strat to develop <br>
- 2.update project<br>
+ 1.update project<br>
  
  
  <br><br>
